@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bmex1gy5eoaub"]
+
+[ext_resource type="Script" uid="uid://cwp8te2yosufr" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://byu8pqeipifop" path="res://assets/Gemini_Generated_Image_hlf0xkhlf0xkhlf0.jpeg" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://h8jn2wyr2rbr" path="res://assets/START-10-24-2026.png" id="3_jix8l"]
+[ext_resource type="Texture2D" uid="uid://cdh8yumb0n5u6" path="res://assets/quit-10-24-2026.png" id="4_glbon"]
+[ext_resource type="Texture2D" uid="uid://c31haf8b4cxus" path="res://assets/PINOY-POLY-10-24-2026.png" id="5_glbon"]
+
+[node name="Main Menu" type="Node2D" unique_id=1934139534]
+script = ExtResource("1_06t4h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121629870]
+position = Vector2(582, 500.5)
+scale = Vector2(0.98062336, 1.1647727)
+texture = ExtResource("2_7vrkn")
+metadata/_edit_lock_ = true
+
+[node name="Button_manager" type="Control" parent="." unique_id=880315882]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Button_manager" unique_id=540130241]
+layout_mode = 0
+offset_left = 280.00003
+offset_top = 397.99997
+offset_right = 1312.0
+offset_bottom = 798.0
+scale = Vector2(0.26482075, 0.42538238)
+icon = ExtResource("3_jix8l")
+
+[node name="Quit" type="Button" parent="Button_manager" unique_id=893205912]
+layout_mode = 0
+offset_left = 600.99994
+offset_top = 398.0
+offset_right = 1697.0383
+offset_bottom = 1027.5764
+scale = Vector2(0.229919, 0.26843446)
+text = "QUIT"
+icon = ExtResource("4_glbon")
+
+[node name="Button" type="Button" parent="Button_manager" unique_id=1845572893]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 122.0
+offset_right = 1164.0
+offset_bottom = 382.0
+scale = Vector2(0.88270587, 1)
+icon = ExtResource("5_glbon")
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

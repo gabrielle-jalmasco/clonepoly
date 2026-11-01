@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bjxh7gndhbe4v"]
+
+[ext_resource type="Script" uid="uid://ddiaq0yc3qjhp" path="res://PlayerSetup.cs" id="1_4flbx"]
+
+[node name="PlayerSetup" type="Control" unique_id=1081593247]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4flbx")
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1463016037]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" type="PanelContainer" parent="Center" unique_id=463988896]
+custom_minimum_size = Vector2(620, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Center/Card" unique_id=1123877592]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Center/Card/MarginContainer" unique_id=28176036]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="title" type="Label" parent="Center/Card/MarginContainer/VBoxContainer" unique_id=887881954]
+modulate = Color(0.07058824, 0.13725491, 0.24705882, 1)
+self_modulate = Color(0.07058824, 0.13725491, 0.24705882, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Who's playing?"
+
+[node name="subtitle" type="Label" parent="Center/Card/MarginContainer/VBoxContainer" unique_id=1187555144]
+modulate = Color(0.07058824, 0.13725491, 0.24705882, 1)
+self_modulate = Color(0.07058824, 0.13725491, 0.24705882, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "\"PinoyPoly takes up to 4 players\""
+
+[node name="CounterRow" type="HBoxContainer" parent="Center/Card/MarginContainer/VBoxContainer" unique_id=1948990155]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="MinusButton" type="Button" parent="Center/Card/MarginContainer/VBoxContainer/CounterRow" unique_id=2146535217]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "\"-\""
+
+[node name="CountLabel" type="Label" parent="Center/Card/MarginContainer/VBoxContainer/CounterRow" unique_id=1092792008]
+unique_name_in_owner = true
+modulate = Color(0.07058824, 0.13725491, 0.24705882, 1)
+self_modulate = Color(0.07058824, 0.13725491, 0.24705882, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "4"
+
+[node name="PlusButton" type="Button" parent="Center/Card/MarginContainer/VBoxContainer/CounterRow" unique_id=366574929]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "\"+\""
+
+[node name="PlayerList" type="VBoxContainer" parent="Center/Card/MarginContainer/VBoxContainer" unique_id=1154521933]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ButtonRow" type="HBoxContainer" parent="Center/Card/MarginContainer/VBoxContainer" unique_id=1966442962]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="BackButton" type="Button" parent="Center/Card/MarginContainer/VBoxContainer/ButtonRow" unique_id=1953732005]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "<- Back"
+
+[node name="ContinueButton" type="Button" parent="Center/Card/MarginContainer/VBoxContainer/ButtonRow" unique_id=1570377249]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Continue ->"

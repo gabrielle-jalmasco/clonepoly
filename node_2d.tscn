@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://mlepptf7rkmg"]
+
+[ext_resource type="Script" uid="uid://jmridhc23g5" path="res://BoardManager.cs" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://b3haqq7wdegsg" path="res://assets/Philippines Monopoly Board Game.png" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://b5ai5yyoho0qa" path="res://assets/Crocodile Tycoon with Cash Briefcase.png" id="3_0hol4"]
+[ext_resource type="Texture2D" uid="uid://bowo0otby6e2a" path="res://assets/die(1).png" id="4_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://cneqlaj134klc" path="res://assets/die(2).png" id="5_hqns4"]
+[ext_resource type="Texture2D" uid="uid://e2nbfbwcw3eb" path="res://assets/die(3).png" id="6_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://cinfa8jrww40n" path="res://assets/die(4).png" id="7_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://dpbsttofbxoyv" path="res://assets/die(5).png" id="8_nr8wp"]
+[ext_resource type="Texture2D" uid="uid://bqidg572sxvv5" path="res://assets/die(6).png" id="9_d2bti"]
+
+[node name="Node2D" type="Node2D" unique_id=1088553967 node_paths=PackedStringArray("Board", "Player", "Die1", "Die2", "Die3", "Die4", "Die5", "Die6")]
+script = ExtResource("1_epypp")
+Board = NodePath("board")
+Player = NodePath("crocorrupt")
+Die1 = NodePath("die1")
+Die2 = NodePath("die2")
+Die3 = NodePath("die3")
+Die4 = NodePath("die4")
+Die5 = NodePath("die5")
+Die6 = NodePath("die6")
+
+[node name="board" type="Sprite2D" parent="." unique_id=1001752246]
+position = Vector2(581, 503)
+scale = Vector2(0.91945785, 0.78708124)
+texture = ExtResource("1_wtcfe")
+
+[node name="crocorrupt" type="Sprite2D" parent="." unique_id=423087040]
+position = Vector2(1091.75, 934.37494)
+scale = Vector2(0.07934611, 0.07555828)
+texture = ExtResource("3_0hol4")
+
+[node name="die1" type="Sprite2D" parent="." unique_id=1226281871]
+position = Vector2(578.25, 775.25)
+scale = Vector2(0.808, 0.8)
+texture = ExtResource("4_ir8iy")
+
+[node name="die2" type="Sprite2D" parent="." unique_id=1015919274]
+visible = false
+position = Vector2(577, 776.99994)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_hqns4")
+
+[node name="die3" type="Sprite2D" parent="." unique_id=1656177126]
+visible = false
+position = Vector2(580, 774.99994)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_x0ka3")
+
+[node name="die4" type="Sprite2D" parent="." unique_id=1155317471]
+visible = false
+position = Vector2(579, 778)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_0h7mo")
+
+[node name="die5" type="Sprite2D" parent="." unique_id=215891494]
+visible = false
+position = Vector2(578.99994, 776)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_nr8wp")
+
+[node name="die6" type="Sprite2D" parent="." unique_id=1741348883]
+visible = false
+position = Vector2(580, 777)
+scale = Vector2(0.7999998, 0.8)
+texture = ExtResource("9_d2bti")
